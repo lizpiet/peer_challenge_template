@@ -1,0 +1,22 @@
+extends layout
+
+block content
+   ul
+      each meme, index in memes
+         li= meme.cat
+         img(src=meme.location)
+         p= sentences[index].sentence
+         form(name="input", action="html_form_action.asp", method="get")
+         |   sentence:
+         input(type="text", name="add your meme" id=meme.id)
+         input(type="submit", id="submit", value="submit")
+
+
+
+
+
+
+
+
+
+
